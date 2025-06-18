@@ -1,0 +1,11 @@
+Summary of Work – E25 Internship Assignment (Front-End)
+
+- Converted multiple sections from the provided Figma design: Hero, AI Automation, Testimonial, and CTA.
+- Used semantic HTML and organized the code using separate HTML, CSS, and JS files.
+- Implemented animations, responsive design, and interactivity using JavaScript.
+- Features include parallax effect on logos, smooth scroll, and dynamic content animation.
+- Code follows best practices and is ready for deployment.
+
+Live Demo: [add your Netlify/Vercel/GitHub Pages link here]
+
+Submitted by: <Your Name>

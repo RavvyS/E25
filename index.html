@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>E25 Internship Assessment</title>
+  <link rel="stylesheet" href="style.css" />
+ 
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero-section section">
+        <div class="floating-logos">
+            <div class="logo-item blackberry">
+                <div style="width: 60px; height: 60px; background: #000; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                    <div style="width: 30px; height: 30px; background: white; border-radius: 4px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; padding: 4px;">
+                        <div style="background: #000; border-radius: 1px;"></div>
+                        <div style="background: #000; border-radius: 1px;"></div>
+                        <div style="background: #000; border-radius: 1px;"></div>
+                        <div style="background: #000; border-radius: 1px;"></div>
+                        <div style="background: #000; border-radius: 1px;"></div>
+                        <div style="background: #000; border-radius: 1px;"></div>
+                        <div style="background: #000; border-radius: 1px;"></div>
+                        <div style="background: #000; border-radius: 1px;"></div>
+                        <div style="background: #000; border-radius: 1px;"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="logo-item microsoft">
+                <div style="width: 60px; height: 60px; display: grid; grid-template-columns: 1fr 1fr; gap: 4px;">
+                    <div style="background: #f25022; border-radius: 2px;"></div>
+                    <div style="background: #7fba00; border-radius: 2px;"></div>
+                    <div style="background: #00a4ef; border-radius: 2px;"></div>
+                    <div style="background: #ffb900; border-radius: 2px;"></div>
+                </div>
+            </div>
+            
+            <div class="logo-item facebook">
+                <div style="width: 60px; height: 60px; background: #1877f2; border-radius: 15px; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; font-weight: bold;">f</div>
+            </div>
+            
+            <div class="logo-item aws">
+                <div style="width: 60px; height: 20px; background: #ff9900; position: relative; border-radius: 4px;">
+                    <div style="position: absolute; top: -8px; left: 0; color: #232f3e; font-weight: bold; font-size: 14px;">aws</div>
+                    <div style="position: absolute; bottom: -10px; right: 0; width: 20px; height: 6px; background: #ff9900; border-radius: 3px; transform: rotate(-15deg);"></div>
+                </div>
+            </div>
+            
+            <div class="logo-item finder">
+                <div style="width: 60px; height: 60px; background: linear-gradient(45deg, #4285f4, #34a853, #fbbc05, #ea4335); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                    <div style="width: 40px; height: 40px; background: white; border-radius: 4px; display: flex; align-items: center; justify-content: center;">
+                        <div style="width: 20px; height: 20px; background: #4285f4; border-radius: 2px;"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="logo-item cisco">
+                <div style="width: 60px; height: 30px; background: #1ba0d7; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 12px;">CISCO</div>
+            </div>
+            
+            <div class="logo-item snowflake">
+                <div style="width: 60px; height: 60px; background: #29b5e8; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem;">❄</div>
+            </div>
+            
+            <div class="logo-item menu-icon">
+                <div style="width: 60px; height: 60px; background: #4285f4; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem;">☰</div>
+            </div>
+        </div>
+        
+        <div class="hero-container">
+            <h1 class="hero-title">Ideas Galore for Your Creative Team</h1>
+            <p class="hero-subtitle">Leverage our curated tools or build custom integrations</p>
+            <button class="cta-button" onclick="scrollToSection('ai-section')">Discover Success Stories →</button>
+        </div>
+    </section>
+
+    <!-- AI Automation Section -->
+    <section id="ai-section" class="ai-section section">
+        <div class="ai-container">
+            <div class="ai-content">
+                <h2>AI Automation: Elevating Team Efficiency and Scalability</h2>
+                <button class="ai-guide-btn" onclick="downloadGuide()">Get Your Free Guide →</button>
+            </div>
+            
+            <div class="device-mockup">
+                <div class="tablet">
+                    <div class="tablet-screen">
+                        <h3 style="font-size: 2rem; margin-bottom: 1rem; background: linear-gradient(45deg, #ff6b6b, #4ecdc4); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">The AI-Driven Automation + Edge</h3>
+                        <p style="font-size: 1.1rem; opacity: 0.9;">Performance and Growth for Digital Teams</p>
+                    </div>
+                </div>
+                
+                <div class="automation-card">
+                    <h3>Automation Runtime</h3>
+                    <h4 style="color: #666; font-size: 1rem; margin-bottom: 1rem;">Trigger and Enrich Automation with Infinite Data Feeds</h4>
+                    <p>Data integrations are the foundation of Turbine's low-code automation capabilities. Data injection can trigger automated processes or be used to correlate or enrich data at any step of a playbook execution.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="testimonial-section section">
+        <div class="testimonial-container">
+            <div class="gartner-card">
+                <div class="gartner-logo">
+                    <div class="laurel-icon">🏆</div>
+                    <div>
+                        <div class="gartner-text">Gartner</div>
+                        <div style="font-size: 0.9rem; color: #666;">Peer Insights</div>
+                        <div style="font-size: 0.9rem; color: #666;">Customers' Choice 2024</div>
+                    </div>
+                </div>
+                
+                <div class="rating">
+                    <span class="rating-number">4.3</span>
+                    <span class="stars">★★★★☆</span>
+                </div>
+            </div>
+            
+            <div class="testimonial-content">
+                <h2>Top-Ranked Collaboration Tool</h2>
+                <p class="testimonial-quote">"As a developer using this platform, I'm impressed. Building workflows with the ready-made components made the product immediately valuable."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section section">
+        <div class="cta-content">
+            <h2>Eager to Begin Your Journey?</h2>
+            <button class="connect-button" onclick="connectWithUs()">Let's Connect</button>
+        </div>
+    </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
