@@ -1,5 +1,4 @@
-
-        * {
+* {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -14,7 +13,7 @@
         /* Hero Section */
         .hero-section {
             min-height: 100vh;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -45,11 +44,11 @@
         }
 
         .cta-button {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #FF3366 0%, #FF3366 100%);
             color: white;
             padding: 1rem 2.5rem;
             border: none;
-            border-radius: 50px;
+            border-radius: 8px;
             font-size: 1.1rem;
             font-weight: 600;
             cursor: pointer;
@@ -89,13 +88,25 @@
         }
 
         .blackberry { top: 15%; left: 5%; animation-delay: 0s; }
-        .microsoft { top: 10%; right: 15%; animation-delay: -1s; }
-        .facebook { top: 40%; right: 5%; animation-delay: -2s; }
         .aws { bottom: 40%; left: 8%; animation-delay: -3s; }
         .finder { bottom: 15%; left: 25%; animation-delay: -4s; }
+
+        .microsoft { top: 10%; right: 15%; animation-delay: -1s; }
+        .facebook { top: 40%; right: 5%; animation-delay: -2s; }
         .cisco { bottom: 20%; right: 20%; animation-delay: -5s; }
         .snowflake { bottom: 35%; right: 8%; animation-delay: -1.5s; }
         .menu-icon { top: 20%; right: 8%; animation-delay: -2.5s; }
+        .left-logo-1 { 
+    top: 30%; 
+    left: 15%; 
+    animation-delay: -2.8s; 
+}
+
+.left-logo-2 { 
+    top: 60%; 
+    left: 18%; 
+    animation-delay: -1.3s; 
+}
 
         @keyframes float {
             0%, 100% { transform: translateY(0px); }
@@ -110,7 +121,7 @@
 
         /* AI Automation Section */
         .ai-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(100deg, #6B1065 0%, #FF59FC 100%);
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -140,7 +151,7 @@
             color: white;
             padding: 1rem 2rem;
             border: 2px solid rgba(255, 255, 255, 0.3);
-            border-radius: 50px;
+            border-radius: 10px;
             font-size: 1.1rem;
             font-weight: 600;
             cursor: pointer;
@@ -203,11 +214,23 @@
 
         /* Testimonial Section */
         .testimonial-section {
-            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            background: linear-gradient(135deg, #d4e5ff 0%, #ffffff 100%);
             min-height: 100vh;
             display: flex;
             align-items: center;
             position: relative;
+            overflow: hidden;
+        }
+
+        .testimonial-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 65%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+            pointer-events: none;
         }
 
         .testimonial-container {
@@ -218,83 +241,55 @@
             margin: 0 auto;
             padding: 0 2rem;
             align-items: center;
+            position: relative;
+            z-index: 2;
         }
 
-        .gartner-card {
-            background: white;
+        /* .gartner-card {
+            background: transparent;
             border-radius: 25px;
-            padding: 3rem;
+            padding:2rem;
             box-shadow: 0 20px 60px rgba(0,0,0,0.1);
             text-align: center;
-            transform: perspective(1000px) rotateY(10deg);
             transition: all 0.3s ease;
+            max-width: 400px;
+            margin: 0 auto;e
+        } */
+
+        .gartner-card-image {
+            width: 100%;
+            height: auto;
+            
+            max-width: 450px;
+            margin: 0 auto 1.5rem;
+            display: block;
         }
 
-        .gartner-card:hover {
-            transform: perspective(1000px) rotateY(5deg) scale(1.02);
-        }
 
-        .gartner-logo {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 2rem;
-            gap: 1rem;
-        }
 
-        .laurel-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-        }
 
-        .gartner-text {
-            color: #1a365d;
-            font-weight: 600;
-        }
 
-        .rating {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            margin-top: 2rem;
-        }
-
-        .rating-number {
-            font-size: 2rem;
-            font-weight: 700;
-            color: #1a365d;
-        }
-
-        .stars {
-            color: #ffd700;
-            font-size: 1.5rem;
-        }
 
         .testimonial-content h2 {
             font-size: 3.5rem;
             color: #1a365d;
             font-weight: 700;
-            line-height: 1.2;
+            line-height: 1.1;
             margin-bottom: 2rem;
         }
 
         .testimonial-quote {
             font-size: 1.2rem;
             color: #4a5568;
-            font-style: italic;
             line-height: 1.6;
+            position: relative;
+            padding-left: 1rem;
+            
         }
 
         /* CTA Section */
         .cta-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #000743 0%, #000743 100%);
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -333,11 +328,11 @@
         }
 
         .connect-button {
-            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+            background: linear-gradient(135deg,#FF3366 0%, #FF3366 100%);
             color: white;
             padding: 1.2rem 3rem;
             border: none;
-            border-radius: 50px;
+            border-radius: 8px;
             font-size: 1.2rem;
             font-weight: 600;
             cursor: pointer;
@@ -352,7 +347,32 @@
             box-shadow: 0 15px 40px rgba(255, 107, 107, 0.4);
         }
 
-        /* Responsive Design */
+        /* CTA Section Color Top Image */
+.cta-color-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* CTA Section Grid Image for right corner */
+.cta-grid-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 45%;
+  object-fit: cover;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.60; /* Adjust opacity as needed */
+}
+
+/* Responsive Design */
         @media (max-width: 768px) {
             .hero-title {
                 font-size: 2.5rem;
