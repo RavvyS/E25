@@ -10,6 +10,46 @@
             overflow-x: hidden;
         }
 
+        /* Navigation Arrows */
+        .nav-arrow {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            color: #333;
+        }
+
+        .nav-arrow:hover {
+            background: rgba(255, 255, 255, 1);
+            transform: translateY(-50%) scale(1.1);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-arrow-left {
+            left: 30px;
+        }
+
+        .nav-arrow-right {
+            right: 30px;
+        }
+
+        /* Hide arrows on mobile */
+        @media (max-width: 768px) {
+            .nav-arrow {
+                display: none;
+            }
+        }
+
         /* Hero Section */
         .hero-section {
             min-height: 100vh;
@@ -122,7 +162,7 @@
         /* AI Automation Section */
         .ai-section {
             background: linear-gradient(100deg, #6B1065 0%, #FF59FC 100%);
-            min-height: 100vh;
+            min-height: 85vh;
             display: flex;
             align-items: center;
             position: relative;
@@ -175,10 +215,10 @@
 
 .tab2 {
     position: absolute;
-    top: -234px;
+    top: -213px;
     right: -90px;
     z-index: 2;
-    width: 40%;
+    width: 35%;
     opacity: 1;
 }
 
@@ -191,11 +231,11 @@
 /* Add styling for tab1 */
 .tab1 {
     position: absolute;
-    bottom: -65%;
+    bottom: -78%;
     left: 65%;
     transform: translateX(-50%);
     z-index: 2;
-    width: 45%;
+    width: 35%;
     opacity: 1;
 }
 
@@ -205,6 +245,11 @@
     display: block;
 }
         
+.bothTabs{
+    height: 50%;
+    width: 100%;
+
+}
 
         .ai-content {
     text-align: left;
@@ -216,7 +261,7 @@
 
 .ai-content h2 {
     font-size: 3.5rem;
-    color: white;
+    color: rgb(255, 255, 255);
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 2rem;
@@ -229,7 +274,7 @@
 }
 
         .ai-content h2 {
-            font-size: 3.5rem;
+            font-size: 3.2rem;
             color: white;
             font-weight: 700;
             line-height: 1.2;
@@ -370,16 +415,46 @@
             z-index: 2;
         }
 
-        /* .gartner-card {
-            background: transparent;
-            border-radius: 25px;
-            padding:2rem;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
-            text-align: center;
-            transition: all 0.3s ease;
-            max-width: 400px;
-            margin: 0 auto;e
-        } */
+        .gartner-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-arrow {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  
+  
+  cursor: pointer;
+  z-index: 3;
+  
+  transition: all 0.3s ease;
+}
+
+.card-arrow svg {
+  width: 64px;  /* Increased from 20px */
+  height: 64px; /* Increased from 20px */
+}
+
+
+.card-arrow:hover {
+  transform: scale(1.1);
+ 
+}
+
+.card-arrow-left {
+  left: -20px;
+}
+
+.card-arrow-right {
+  right: -20px;
+}
 
         .gartner-card-image {
             width: 100%;

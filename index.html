@@ -7,8 +7,11 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- Navigation Arrows -->
+    
+
     <!-- Hero Section -->
-    <section class="hero-section section">
+    <section class="hero-section section" data-section="0">
       <div class="floating-logos">
 
         <div class="logo-item blackberry">
@@ -68,7 +71,7 @@
     </section>
 
     <!-- AI Automation Section -->
-    <section id="ai-section" class="ai-section section">
+    <section id="ai-section" class="ai-section section" data-section="1">
       <!-- Add the grid background -->
       <img src="assets/secondPage/grid.png" alt="Grid Background" class="section-background-grid">
       
@@ -85,6 +88,7 @@
         
 
 
+
         <div class="tab2">
 <img src="assets/tablet/tab2.png" alt="Tablet 2" class="">
 </div>
@@ -93,26 +97,35 @@
 <img src="assets/tablet/tab1.png" alt="Tablet 1" class="">
 </div>
 
+
+
         </div>
       </div>
     </section>
 
     <!-- Testimonial Section -->
-    <section class="testimonial-section section">
+    <section class="testimonial-section section" data-section="2">
       <!-- Add background gradient image from assets -->
       <img src="assets/card/backgorundMask.png" alt="Background Gradient" class="testimonial-background">
       
       <div class="testimonial-container">
         <div class="gartner-card">
-
-            
-          <!-- Replace placeholder with actual Gartner card image -->
+          <!-- Left arrow -->
+          <div class="card-arrow card-arrow-left">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15 18L9 12L15 6" stroke="#6B1065" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          
+          <!-- Gartner card image -->
           <img src="assets/card/gartner card .png" alt="Gartner Peer Insights" class="gartner-card-image">
           
-   
-   
-      
-     
+          <!-- Right arrow -->
+          <div class="card-arrow card-arrow-right">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9 18L15 12L9 6" stroke="#6B1065" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
         </div>
 
         <div class="testimonial-content">
@@ -127,7 +140,7 @@
     </section>
 
     <!-- Call to Action Section -->
-    <section class="cta-section section">
+    <section class="cta-section section" data-section="3">
       <!-- Add the color top image here -->
       <img src="assets/lastPage/color top.png" alt="Color Top Decoration" class="cta-color-top">
       
@@ -143,5 +156,6 @@
     </section>
 
     <script src="script.js"></script>
+   
   </body>
 </html>

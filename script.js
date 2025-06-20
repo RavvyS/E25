@@ -66,3 +66,49 @@ document
 
 // Initialize first section as visible
 document.querySelector(".hero-section").classList.add("visible");
+
+
+// Navigation functionality
+      let currentSection = 0;
+      const sections = document.querySelectorAll('.section');
+      const totalSections = sections.length;
+
+      function navigateSection(direction) {
+        currentSection += direction;
+        
+        if (currentSection < 0) {
+          currentSection = totalSections - 1;
+        } else if (currentSection >= totalSections) {
+          currentSection = 0;
+        }
+        
+        sections[currentSection].scrollIntoView({
+          behavior: 'smooth'
+        });
+      }
+
+      // Update current section based on scroll position
+      function updateCurrentSection() {
+        const scrollPosition = window.scrollY + window.innerHeight / 2;
+        
+        sections.forEach((section, index) => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.offsetHeight;
+          
+          if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+            currentSection = index;
+          }
+        });
+      }
+
+      // Listen for scroll events to update current section
+      window.addEventListener('scroll', updateCurrentSection);
+
+      // Keyboard navigation
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'ArrowLeft') {
+          navigateSection(-1);
+        } else if (e.key === 'ArrowRight') {
+          navigateSection(1);
+        }
+      });
