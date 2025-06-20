@@ -215,8 +215,8 @@
 
 .tab2 {
     position: absolute;
-    top: -213px;
-    right: -90px;
+    top: -79%;
+    right: -0.5%;
     z-index: 2;
     width: 35%;
     opacity: 1;
@@ -231,7 +231,7 @@
 /* Add styling for tab1 */
 .tab1 {
     position: absolute;
-    bottom: -78%;
+    bottom: -85%;
     left: 65%;
     transform: translateX(-50%);
     z-index: 2;
@@ -305,12 +305,12 @@
 .tablet-container {
     position: relative;
     max-width: 100%;
-    margin-top: 30px;
+    margin-top: 50%;
 }
 
 .tablet-image {
     width: 100%;
-    max-width: 500px;
+    max-width: 50%;
     height: auto;
     display: block;
     border-radius: 20px;

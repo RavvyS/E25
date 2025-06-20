@@ -44,71 +44,50 @@ window.addEventListener("scroll", () => {
   });
 });
 
-// Cursor tracking on device mockup
-document.querySelector(".device-mockup")?.addEventListener("mousemove", (e) => {
-  const rect = e.currentTarget.getBoundingClientRect();
-  const x = e.clientX - rect.left;
-  const y = e.clientY - rect.top;
-  const centerX = rect.width / 2;
-  const centerY = rect.height / 2;
-
-  const rotateX = (y - centerY) / 10;
-  const rotateY = (centerX - x) / 10;
-
-  e.currentTarget.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
-});
-
-document
-  .querySelector(".device-mockup")
-  ?.addEventListener("mouseleave", (e) => {
-    e.currentTarget.style.transform = "perspective(1000px) rotateY(-15deg)";
-  });
-
 // Initialize first section as visible
 document.querySelector(".hero-section").classList.add("visible");
 
-
 // Navigation functionality
-      let currentSection = 0;
-      const sections = document.querySelectorAll('.section');
-      const totalSections = sections.length;
+let currentSection = 0;
+const sections = document.querySelectorAll('.section');
+const totalSections = sections.length;
 
-      function navigateSection(direction) {
-        currentSection += direction;
-        
-        if (currentSection < 0) {
-          currentSection = totalSections - 1;
-        } else if (currentSection >= totalSections) {
-          currentSection = 0;
-        }
-        
-        sections[currentSection].scrollIntoView({
-          behavior: 'smooth'
-        });
-      }
+function navigateSection(direction) {
+  currentSection += direction;
+  
+  if (currentSection < 0) {
+    currentSection = totalSections - 1;
+  } else if (currentSection >= totalSections) {
+    currentSection = 0;
+  }
+  
+  sections[currentSection].scrollIntoView({
+    behavior: 'smooth'
+  });
+}
 
-      // Update current section based on scroll position
-      function updateCurrentSection() {
-        const scrollPosition = window.scrollY + window.innerHeight / 2;
-        
-        sections.forEach((section, index) => {
-          const sectionTop = section.offsetTop;
-          const sectionHeight = section.offsetHeight;
-          
-          if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-            currentSection = index;
-          }
-        });
-      }
+// Update current section based on scroll position
+function updateCurrentSection() {
+  const scrollPosition = window.scrollY + window.innerHeight / 2;
+  
+  sections.forEach((section, index) => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.offsetHeight;
+    
+    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+      currentSection = index;
+    }
+  });
+}
 
-      // Listen for scroll events to update current section
-      window.addEventListener('scroll', updateCurrentSection);
+// Listen for scroll events to update current section
+window.addEventListener('scroll', updateCurrentSection);
 
-      // Keyboard navigation
-      document.addEventListener('keydown', function(e) {
-        if (e.key === 'ArrowLeft') {
-          navigateSection(-1);
-        } else if (e.key === 'ArrowRight') {
-          navigateSection(1);
-        }
-      });
+// Keyboard navigation
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'ArrowLeft') {
+    navigateSection(-1);
+  } else if (e.key === 'ArrowRight') {
+    navigateSection(1);
+  }
+});
